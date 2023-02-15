@@ -1,17 +1,17 @@
 {
-  "name": "choose-to-file",
-  "version": "0.1.2",
+  "name": "@yipai-front-end/choose-to-file",
+  "version": "0.0.1",
   "main": "./dist/index.js",
   "types": "./index.d.ts",
   "scripts": {
     "build": "tsc"
   },
-  "author": "wu.vkcyan@gmail.com",
+  "author": "wukai@e2pai.net",
   "description": "Web side functional upload file",
   "bugs": {
-    "url": "https://github.com/vkcyan/choose-to-file/issues"
+    "url": "https://github.com/yipai-front-end/choose-to-file/issues"
   },
-  "homepage": "https://github.com/vkcyan/choose-to-file#readme",
+  "homepage": "https://github.com/yipai-front-end/choose-to-file#readme",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.15"
