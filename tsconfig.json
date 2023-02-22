@@ -1,18 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
     "lib": [
-      "es2016",
-      "dom"
+      "ESNext",
+      "DOM"
     ],
-    "module": "ES6",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
     "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
     "skipLibCheck": true
   },
   "include": [
-    "source/index.ts",
-  ],
+    "source",
+    "src"
+  ]
 }
