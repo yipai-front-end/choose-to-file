@@ -6,7 +6,9 @@ const chooseToFile = (
 ) => {
   return new Promise((resolve, reject) => {
     if (document.readyState != 'complete') {
-      throw new Error('dom loading exception, please ensure that the dom is fully loaded before using')
+      throw new Error(
+        'dom loading exception, please ensure that the dom is fully loaded before using'
+      )
     }
     let fileCancle = true // 是否未上传文件
 
@@ -23,7 +25,7 @@ const chooseToFile = (
     input.onchange = (evt) => {
       fileCancle = false
       let { files } = evt.target as HTMLInputElement
-      return resolve(params.multiple ? files : files![0])
+      return resolve(params.multiple ? files! : files![0])
     }
 
     /**
@@ -37,7 +39,7 @@ const chooseToFile = (
         }
       }, 500)
     }
-  })
+  }) as Promise<FileList | File>
 }
 
 export { chooseToFile }
@@ -46,7 +48,13 @@ export { chooseToFile }
  * 创建上传用input
  * @returns
  */
-function createInput({ multiple, accept }: { multiple: boolean; accept: string | null }) {
+function createInput({
+  multiple,
+  accept,
+}: {
+  multiple: boolean
+  accept: string | null
+}) {
   // 创建dom
   let input = document.createElement('input')
   input.type = 'file'
