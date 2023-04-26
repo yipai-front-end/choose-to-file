@@ -3,7 +3,7 @@ const chooseToFile = (
     multiple: true,
     accept: null,
   }
-) => {
+): Promise<File[] | File> => {
   return new Promise((resolve, reject) => {
     if (document.readyState != 'complete') {
       throw new Error(
@@ -25,7 +25,7 @@ const chooseToFile = (
     input.onchange = (evt) => {
       fileCancle = false
       let { files } = evt.target as HTMLInputElement
-      return resolve(params.multiple ? files! : files![0])
+      return resolve(params.multiple ? (files as unknown as File[]) : files![0])
     }
 
     /**
@@ -39,7 +39,7 @@ const chooseToFile = (
         }
       }, 500)
     }
-  }) as Promise<FileList | File>
+  })
 }
 
 export { chooseToFile }
