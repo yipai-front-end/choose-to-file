@@ -1,31 +1,29 @@
 {
   "name": "@yipai-front-end/choose-to-file",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
-  "files": [
-    "dist",
-    "source"
-  ],
   "author": "wukai@e2pai.net",
   "description": "Web side functional upload file",
   "license": "ISC",
-  "main": "./dist/index.umd.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "bugs": {
-    "url": "https://github.com/yipai-front-end/choose-to-file/issues"
-  },
-  "homepage": "https://github.com/yipai-front-end/choose-to-file#readme",
-  "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "require": "./dist/index.umd.cjs"
-  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build"
   },
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "types": "./dist/index.d.ts"
+  },
+  "files": [
+    "dist",
+    "source"
+  ],
+  "bugs": {
+    "url": "https://github.com/yipai-front-end/choose-to-file/issues"
+  },
+  "homepage": "https://github.com/yipai-front-end/choose-to-file#readme",
   "devDependencies": {
     "@types/node": "^18.14.0",
     "typescript": "^4.9.4",
