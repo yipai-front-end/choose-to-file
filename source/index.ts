@@ -5,9 +5,7 @@ const chooseToFile = (
 ): Promise<FileList> => {
   return new Promise((resolve, reject) => {
     if (document.readyState != 'complete') {
-      throw new Error(
-        'dom loading exception, please ensure that the dom is fully loaded before using'
-      )
+      throw new Error('dom loading exception, please ensure that the dom is fully loaded before using')
     }
     let fileCancle = true // 是否未上传文件
 
