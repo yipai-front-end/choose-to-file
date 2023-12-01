@@ -1,8 +1,4 @@
-const chooseToFile = (
-  params = {
-    accept: null,
-  }
-): Promise<FileList> => {
+const chooseToFile = (params: { accept: string } = { accept: '*/*' }): Promise<FileList> => {
   return new Promise((resolve, reject) => {
     if (document.readyState != 'complete') {
       throw new Error('dom loading exception, please ensure that the dom is fully loaded before using')
